@@ -5,7 +5,7 @@ metadata:
 spec:
   deviceSelector:
     matchLabels:
-      dc: home
+      dc: beaker
   type: pod
   pod:
     spec:
