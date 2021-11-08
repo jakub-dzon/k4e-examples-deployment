@@ -1,0 +1,20 @@
+apiVersion: tekton.dev/v1alpha1
+kind: PipelineRun
+metadata:
+  generateName: k4e-examples-build-pipeline-run-
+spec:
+  pipelineRef:
+    name: random-server-build-pipeline
+  serviceAccountNames:
+    - taskName: build-and-push
+      serviceAccountName: k4e-examples-pipeline
+  params:
+    - name: imageTag
+      value: "testing"
+  resources:
+    - name: app-git
+      resourceRef:
+        name: k4e-examples-git
+    - name: app-image
+      resourceRef:
+        name: random-server-image
