@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: stats-collector
-          image: quay.io/jdzon/os-stats:v1
+          image: quay.io/jdzon/os-stats:v2
 
 
