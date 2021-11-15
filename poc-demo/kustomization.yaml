@@ -1,4 +1,4 @@
 resources:
-  - cluster/metrics-producer.yaml
-  - cluster/pod-monitor.yaml
+  - cluster/metrics-producer/metrics-producer.yaml
+  - cluster/metrics-producer/pod-monitor.yaml
   - edge/os-stats/stats-edgedeployment.yaml
