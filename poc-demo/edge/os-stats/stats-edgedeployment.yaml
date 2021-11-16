@@ -4,8 +4,10 @@ metadata:
   name: os-stats
 spec:
   deviceSelector:
-    matchLabels:
-      arch: x86_64
+    matchExpressions:
+      - key: arch
+        operator: In
+        values: [x86_64, aarch64]
   data:
     paths:
       - source: stats
